@@ -42,7 +42,7 @@
         printf("Could not find characteristic with UUID %s on service with UUID %s on peripheral with UUID %s\r\n",[self CBUUIDToString:cu],[self CBUUIDToString:su],[self UUIDToString:p.UUID]);
         return;
     }
-    [p writeValue:data forCharacteristic:characteristic type:CBCharacteristicWriteWithoutResponse];
+    [p writeValue:data forCharacteristic:characteristic type:CBCharacteristicWriteWithResponse];
 }
 
 
